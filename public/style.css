@@ -1,0 +1,555 @@
+/*  -----------------------------------------        */
+/*  Übergreifend / Body                              */
+/*  -----------------------------------------        */
+html, body {
+ background-image:url(../hintergrund.jpg); !Hintergrundbild verwenden;
+ background-repeat:no-repeat; !Hintergrundbild wird nicht wiederholt;
+ background-size: cover;      !Parallax-Effekt - Hintergundbild ist bildschirmfüllend;
+ overflow:hidden;             !Alle Body-Scrollbalken verstecken;
+}
+
+#kopfbereich {
+
+  position:fixed;            ! Position des Kopfbereichs ist immer oben - FIX!;
+  top:0;                     ! Position oben;
+  left:0;                    ! Position ganz links;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color:#063970;    ! Hintergrundfarbe;
+  width:100%;                ! Breite des Kopfbereichs;
+  height:150px;              ! Höhe des Kopfbereichs;
+  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
+}
+
+#navibereich {
+  position:fixed;            ! Position des Navibereichs immer links! - Fix;
+  top: 151px;                ! Position unterhalb des Kopfbereiches;
+  left:0;                    ! Position ganz links;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color:rgb(176, 196, 222);      ! Hintergrundfarbe;
+  width:150px;               ! Breite des Navibereichs;
+  min-height:683px;          ! Minimal-Höhe des Navibereichs;
+  z-index:2;                 ! Navibereich überlagert andere Bereiche;
+}
+
+#textbereich {
+
+  position:fixed;            ! Position des Textbereichs immer in der Mitte!;
+  left:0;                    ! Textbereich fängt ganz links an;
+  right:0;                   ! Textbereich geht bis ganz rechts;
+  top:120px;                 ! Außenabstand zum Kopfbereich;
+  padding-left:210px;        ! Innenabstand zum Menü;
+  padding-right:210px;       ! Innenabstand zum Newsbereich;
+  padding-top:20px;          ! Innenabstand nach oben;
+  padding-bottom:60px;       ! Innenabstand nach unten;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  height:100%;               ! Höhe des Textbereiches auf 100% eingestellt;
+  overflow-y: auto;          ! Zeige Scrollbalken rechts, falls notwendig;
+  background-color:rgba(255,255,255,0.5); ! Hintergrund ist weiß mit 50 %iger Transparenz;
+}
+
+#newsbereich {
+  position:fixed;            ! Position des Newsbereichs immer rechts! - FIX;
+  right:0px;                 ! Rechtsausrichtung;
+  top: 151px;                ! Position unterhalb des Kopfbereiches;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color:rgb(176, 196, 222);   ! Hintergrundfarbe;
+  width:150px;               ! Breite des Newsbereichs;
+  min-height:683px;          ! Minimal-Höhe des Newsbereichs;
+  z-index:2;                 ! Newsbereich überlagert andere Bereiche;
+}
+
+#fussbereich {
+
+ position:fixed;              ! Position des Fußbereichs immer unten!;
+ bottom:0;                    ! Unten ausgerichtet!;
+ left:0;                      ! Position ganz links;
+ border: 1px solid #ccc;      ! Rahmenart und -farbe;
+ width: 100%;                 ! Breite des Fussbereichs;
+ background-color:#063970;      ! Hintergrundfarbe;
+ height:60px;                 ! Höhe des Fußbereichs;
+ z-index:3;                   ! Fußbereich überlagert andere Bereiche;
+ text-align:center;           ! Text wird im Fussbereich zentriert;
+ padding:10px;                ! Innenabstand einheitlich bei 10px;
+
+} 
+/*  ----------------------------------------- */
+/*  Schriftformatierung                       */
+/*  ----------------------------------------- */
+
+p {
+font-family:"Montserrat", sans-serif;                              ! Festlegung der Schriftart;
+font-style:normal;                                                 ! Festlegung des Schrifttyps;
+font-size:11pt;                                                    ! Festlegung des Schriftgröße;
+font-weight:normal;                                                ! Festlegung der Fettschrift;
+color:#000000;                                                     ! Festlegung des Schriftfarbe;
+}
+.title {
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-size:25pt;                                                    ! Festlegung des Schriftgröße;
+font-weight:bold;                                                  ! Festlegung der Fettschrift;
+}
+.header-title {
+font-family: "Roboto", sans-serif;
+font-optical-sizing: auto;
+font-size:30pt;                                                   ! Festlegung des Schriftgröße;
+font-weight:800;                                                  ! Festlegung der Fettschrift;
+text-align: center;
+color:rgb(255,255,255)
+}
+.header-image {
+content:url(https://cdn.glitch.global/8a4d2fdd-49e1-4384-95c1-4ccbb0427b5c/JT%20Jacek%20Tulacz%20logo.jpg?v=1730288386027); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+width:145px;
+float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
+margin:5px;
+border-radius: 70% 30%;
+}
+.text-image {
+content:url(https://cdn.glitch.global/8a4d2fdd-49e1-4384-95c1-4ccbb0427b5c/56a51d89-055b-4485-bcc1-085be27b55a5.image.png?v=1728468170307); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+width:200px;
+float:right;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
+margin:40px;
+border-radius: 50% 50%;
+}
+.footer-text {
+font-family: "Oswald", sans-serif; 
+margin:0;
+padding:5px;
+line-height:18px;
+font-size:90%;           ! Festlegung des Schriftgröße;
+font-weight:bold;        ! Festlegung der Fettschrift;
+color: rgba(255,255,255,1);  ! Festlegung der Schriftfarbe (hier schwarz);
+text-decoration:none;		! Keinen Unterstrich unterhalb des Menütitels;
+text-transform:uppercase;	! Verwende Großbuchstaben;
+}
+.footer-text > a:hover {
+font-weight:700;	! Festlegung der Fettschrift für Montserrat, ansons-ten bold einstellen;
+font-style:oblique;	! Festlegung der Kursiv-Schrift;
+color: rgba(90,195,208,1);	! Festlegung des Schriftfarbe (weiß);
+}
+
+/*  -----------------------------------------        */
+/*  Menüformatierung                                 */
+/*  -----------------------------------------        */
+
+/*  Linkformatierung für das Menü übergreifend       */
+
+.naviformat a, button {
+  	font-family: 'Roboto', sans-serif;
+  	text-transform:uppercase;	! Verwende Großbuchstaben;
+    font-size:90%;            	! Festlegung des Schriftgröße;
+	  font-weight:700;		      ! Festlegung Fettschrift für Montserrat;
+	  color: rgb(0,0,0);		! Festlegung des Schriftfarbe (schwarz);
+	  display: block;			! Art der Anzeige als Blockelement;
+	  transition: all 0.3s ease-out 0s; ! Definition Übergang von Normal zu Hover;
+	  text-decoration:none;		! Keinen Unterstrich unterhalb des Menütitels;
+  	line-height: 20px;		! Höhe der Zeile wird festgelegt;
+  	padding: 5px 5px;			! Innenabstand nach links/rechts/oben/unten;
+}
+
+/*  Formatierung des Hauptmenüs (mainnav)                  */
+
+.mainnav {
+	text-align:right;          ! Textausrichtung rechtbündig;
+	list-style-type: none;     ! es werden keine Aufzählungszeichen dargestellt;
+	margin: 20px -50px;          ! Abstände nach oben/unten und rechts/links;
+}
+
+.mainnav > li {
+	float:none;	! Menüpunkte untereinander, bei float:left, nebeneinander;
+}				
+
+.mainnav > li > a {
+	padding-right:60px;		! Innenabstand nach rechts;
+}
+
+/*  Formatierung des aktiven Hauptmenüpunkts */
+
+.mainnav > li > a.active {
+	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
+	text-shadow: 1px 1px black, 2px 2px grey, 3px 3px 	#696969; ! Text-Schatten;
+  color: rgba(90,195,208,1);	! Festlegung des Schriftfarbe;
+  
+}
+
+/*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
+
+.mainnav > li > a:hover {
+
+	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
+	font-style:italic;	! Festlegung der Kursiv-Schrift;
+	text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; ! Text-Schatten;
+  	background-color:rgba(255,255,255,0.7);   ! Hintergrundfarbe;
+}
+/*  -----------------------------------------        */
+/*  Für Teaser (Blickfang)             	        */
+/*  -----------------------------------------        */
+.teaser {
+	font-weight:bold;				! setze Schriftart und -gewicht;
+	font-family:'Montserrat', sans-serif;
+	padding: 5px 5px;				! Innenabstand für den Teaser;
+	margin: 0 2px 4px 2px;			! Außenabstand nach unten zum nächsten Teaser;
+	border-bottom: 1px solid #ccc;		! unten gibt es eine Begrenzungslinie;
+}
+.teaser_date {
+	font-size:90%;                           		 ! etwas kleiner als die Standardschrift;
+}
+.teaser_title {
+	font-size:90%;                           		! etwas größer als die Standardschrift;
+	line-height:100%;
+}
+.teaser_text {
+  font-size:80%; 
+  line-height: 100%;                          		 ! Anpassung der Zeilenhöhe;
+}
+a.teaser_link {
+  padding-top: 4px;
+  color:black;
+}
+.teaser_border {
+  color: #333;
+  border: 2px solid #063970;
+}
+/*  -----------------------------------------   */
+/* -----Formatierung der Links----------------- */
+/*  -----------------------------------------   */
+a.link {
+   padding-top: 4px;
+   color: rgba(255,255,255,0.5);
+   font-weight:bold;
+   transition: all 0.3s ease-out 0s; ! Definition des Übergangs zu Hover;
+   text-decoration:none;		! Kein Unterstrich unterhalb des Titel;
+   text-shadow: 1px 1px 1px black; ! Festlegung des Text-Shadows;
+}
+
+a.link_black {
+   padding-top: 4px;
+   color: rgba(0,0,0,0.5);
+   font-weight:bold;
+   transition: all 0.3s ease-out 0s; ! Definition des Übergangs zu Hover;
+   text-decoration:none;		! Kein Unterstrich unterhalb des Titels;
+   text-shadow: 1px 1px 1px grey; ! Festlegung des Text-Shadows (Schatten);
+}
+/* -------------------------------------------------------------------------- */
+/* Kontakt-Formular                                                           */
+/* -------------------------------------------------------------------------- */
+/* Als Standard wird alles zentriert, sieht besser aus */
+#contact-formular {
+        text-align:center;
+}
+/* Definition der Felder des Kontaktformular */
+#contact-formular input[type="text"], #contact-formular textarea, #contact-formular 
+input[type="email"] {
+        color: #999999;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width:100%;
+        height:20px;
+        background:#f5f5f5;
+        border-radius:3px;
+        margin-bottom:20px;
+        border:0;
+        box-shadow: 0 0px 3px rgba(0, 0, 0, 0.22) inset;
+        transition: all 0.2s linear;
+ }
+#contact-formular input[type="checkbox"] {
+        margin-bottom:10px;
+        vertical-align:middle;
+}
+#contact-formular textarea  {
+        height: 150px;
+        vertical-align:top;
+}
+#contact-formular input[type=text]:focus, #contact-formular input[type="textarea"]:focus, #contact-formular input[type=email]:focus {
+        background-color: #e1e1e1;
+}
+/* Button im Kontaktformular formatieren */
+#contact-formular input[type="submit"] {
+        color:#22222;
+        background-color:grey;
+        text-transform:uppercase;
+        padding:10px 15px;
+        letter-spacing:0;
+        line-height:14px;
+        cursor:pointer;
+        border-radius:3px;
+        transition:all 0.3s ease 0s;
+        text-align:center;
+}
+/*  Definition der Tabelle für das Formular */
+.form-table {
+padding-right: 10px; 
+margin-left: auto; 
+margin-right: auto; 
+border="0";
+cellspacing="1";
+cellpadding="2";
+width:50%;
+}
+
+/* Definition der Labels im Formular */
+.form-label {
+        vertical-align:top;
+        padding-right:10px;
+        width:95%;
+        font-weight:bold;
+}
+.form-field {
+        vertical-align:top;
+        width:95%;
+}
+.form-label-kontakt {
+        vertical-align:top;
+        padding-right:10px;
+        width:50%;
+        font-weight:bold;
+}
+.form-field-kontakt {
+        vertical-align:top;
+        text-align:left;
+        width:50%;
+}
+.form-submit {
+padding-top:25px;
+text-align:center;
+}
+/* --------------------  */
+/* Bildergalerie         */
+/* --------------------  */
+
+.gallery {
+  --size: 15em; /* control the size */
+  --gap: 1em;  /* control the gap */
+  --zoom: 1.5;   /* control the scale factor */
+  
+  display: grid;
+  gap: var(--gap);
+  width: calc(3.5*var(--size) + 2*var(--gap));
+  aspect-ratio: 5;
+  grid-template-columns: repeat(3,auto);
+}
+.gallery figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.gallery figcaption {
+	position: absolute;
+  bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+  opacity: 0;
+	color: white;
+	background: rgba(0, 0, 0, 0.5);	
+  font-size:90%;
+  font-weight:bold;
+}
+
+.gallery figure:hover figcaption,
+.gallery figure:focus figcaption {
+  opacity: 1;
+}
+
+.gallery > figure img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: .35s linear;
+}
+
+.gallery figure:hover img,
+.gallery figure:focus img{
+  filter: grayscale(0);
+  width:  calc(var(--size)*var(--zoom));
+  height: calc(var(--size)*var(--zoom));
+}
+/* ----------------------------------*/
+/* Der Blog                          */
+/* --------------------------------  */
+#blog {
+  top:200px;                 
+  padding-left:10px;        
+  padding-right:10px;
+  padding-top:10px;          
+  padding-bottom:10px;       
+}
+.post {
+  font-size:130%;
+  background-color: yellow;
+  display: inline-block;
+  width: 95%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+.code-badge {
+  border-radius: 0px !important;
+  padding: 0px !important;
+  background: yellow !important;
+  color: white !important;
+  font-size: 15px !important;
+  padding-left: 10px !important;
+  text-transform: uppercase;
+  padding-top: 3px !important;
+}
+/* -----------------------------------------------------------------------------------*/
+/* Responsive Media Queries - Text- und Absatzformatierung bei unterschiedlichen Bildschirmgrößen, es werden nur die Werte angepasst, die auch geändert werden   */
+/* --------------------------------------------------------------------------------- */
+
+/* -----Tabletes------------------------------------------------------------------- */
+ @media only screen and (max-width: 767px) {
+/* Bestimmung von unterschiedlichen Schriftgrößen in Abhängigkeit von der Bildschirmgröße. */
+html, body {
+        font-size:12px;
+}
+/* Anpassung der Höhe des Kopfbereichs */
+#kopfbereich {
+  height:80px;              ! Höhe des Kopfbereichs;
+}
+/* Anpassung Navibereichs */
+#navibereich {
+  top: 80px;                 ! Position unterhalb des Kopfbereiches;
+  width:150px;               ! Breite des Navibereichs;
+  min-height:150px;          ! Minimal-Höhe des Navibereichs; 
+}
+/* Anpassung Textbereichs */
+#textbereich {
+  top:80px;                  ! Außenabstand zum Kopfbereich;
+  padding-left:160px;        ! Innenabstand zum Menü;
+  padding-right:160px;       ! Innenabstand zum Newsbereich;
+  padding-top:10px;          ! Innenabstand nach oben;
+  padding-bottom:50px;       ! Innenabstand nach unten;
+}
+/* Anpassung Newsbereichs */
+#newsbereich {
+  top: 80px;                ! Position unterhalb des Kopfbereiches;
+  width:150px;               ! Breite des Newsbereichs;
+  min-height:150px;          ! Minimal-Höhe des Newsbereichs;
+ }
+ 
+/* Anpassung Fussbereichs */
+#fussbereich {
+ height:40px;                 ! Höhe des Fußbereichs;
+ padding:5px;                ! Innenabstand einheitlich bei 5px;
+} 
+/*Logogröße anpassen */
+ .header-image {
+  width:110px;
+}
+/*Headertitle Schriftgröße anpassen */
+.header-title {
+font-size:200%;
+}
+/* Anpassung der Schriftgröße sowie der Zeilenhöhe des Menüs */
+#navibereich .mainnav > li > a {
+	font-size:120%;      	! Festlegung des Schriftgröße;
+	line-height: 15px;		! Höhe der Zeile wird festgelegt;
+}
+/*  Anpassung der Tabelle des Kontaktformulars */
+.form-table {
+width:90%;
+}
+}
+
+/* ---------Smartphones------------------------------------------------------------------- */
+ @media only screen and (max-width: 479px) {
+
+/* Bestimmung von unterschiedlichen Schriftgrößen in Abhängigkeit von der Bildschirmgröße. */
+html, body {
+        font-size:12px;
+}
+/* Anpassung der Bereiche für sehr kleine Monitore */
+#kopfbereich {
+  height:70px;              ! Höhe des Kopfbereichs;
+}
+/* Anpassung Navibereichs: Aus dem Navibereich wird ein Klickbotton */
+#navibereich {
+ top: 5px;                
+ left:88%;
+ width: 35px;
+ margin: 2px 2px 2px 2px;
+ height: 35px;
+ min-height: 35px;
+ padding: 2px;
+ background:url("https://cdn.glitch.global/0875808f-d998-41f1-99b4-1ad690cbded0/responsive-menu1.png?v=1648299810546") no-repeat 2px 2px; ! Das Hamburger-Bild gibt’s von mir;
+ background-size:30px 30px; 
+ background-color:grey;
+ cursor:pointer;
+ border-radius:3px;
+ opacity:0.9; ! leichte Transparenz wird eingestellt;
+ text-align:right;
+ touch-action: manipulation; ! Keine Aktion beim Aufklappen des Menüs. IMPORTANT;
+ }
+/* Anpassung Navibereichs: Die Menüpunkte werden optisch angepasst und versteckt */
+#navibereich .mainnav {
+	 background-color:white;
+   width: 160px;
+   text-align:left;
+   display:none; ! Das Menü selbst wird versteckt. Nur beim Klick auf den Button wird das Menü angezeigt;
+   left:90%;
+   float:right;
+   padding:5px;
+   margin-top:62px;
+   right:0;
+ }
+
+#navibereich .mainnav > li > a {
+	font-size:110%;           ! Festlegung des Schriftgröße;
+	line-height: 20px;		    ! Höhe der Zeile wird festgelegt;
+	padding:2px;		          ! Innenabstand einheitlich definiert;
+}   
+   
+#navibereich:hover .mainnav {
+     opacity:1;           ! Transparenz wird ausgeschaltet;
+     display:block;       ! Bei Hover wird das Menü angezeigt;
+ }
+
+   
+   #navibereich:active .mainnav {
+     opacity:1;           ! Transparenz wird ausgeschaltet;
+     display:block;       ! Bei active wird das Menü angezeigt;
+}
+/* Anpassung Textbereich: Der Textbereich erstreckt sich nun über die ganze Breite. */   
+#textbereich {
+
+  top:70px;                 ! Außenabstand zum Kopfbereich;
+  padding-left:10px;        ! Innenabstand zum Menü;
+  padding-right:10px;       ! Innenabstand zum Newsbereich;
+  padding-top:10px;          ! Innenabstand nach oben;
+  padding-bottom:45px;       ! Innenabstand nach unten;
+}
+/* Anpassung Newsbereich: Dieser wird versteckt */
+#newsbereich {
+   visibility:hidden;        ! Newsbereich wird auf dem Smartphone versteckt;
+  }
+/* Anpassung Fußbereich */
+#fussbereich {
+ height:45px;                 ! Höhe des Fußbereichs;
+ padding:5px;                ! Innenabstand einheitlich bei 5px;
+} 
+/*Logogröße anpassen */
+ .header-image {
+  width:80px;
+}
+/*Headertitle Schriftgröße anpassen */
+.header-title {
+font-size:150%;
+padding-right:40px;  
+}
+/*  Anpassung der Tabelle des Kontaktformulars */
+.form-table {
+width:98%;
+}
+}

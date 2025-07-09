@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+  <head>
+    <title>Bewerbungshomepage</title>
+    <meta name="AUTHOR" content="Jacek Tulacz">
+    <meta name="COPYRIGHT" content="Copyright (c) 2024 by Jacek Tulacz">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <meta name="DESCRIPTION" content="Bewerbungshomepage von Jacek Tulacz">
+    <meta name ="KEYWORDS" content ="Bewerbungshomepage, Jacek Tulacz,Bewerbung">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/jquery.min.js"></script>
+    <!-- Load the element definition for markdown-->
+     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <!-- import the googles fonts
+    <!-- import the googles fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+<!-- import the webpage's javascript file -->
+<script src="public/script.js" defer></script>  
+<!-- Einbindung der Javascript-Bibliothek JQUERY von GOOGLE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_berufsbildung');}, 1000);">
+<div id="kopfbereich">    
+  	</div> <!-- Ende kopfbereich -->
+	<div id="navibereich">
+	</div> <!-- Ende navibereich -->
+	<div id="textbereich">
+          <zero-md src="content-schulbildung.md">
+        <template>
+        <!-- Load external stylesheets with a `<link rel="stylesheet">` tag -->
+         <link rel="stylesheet" href="/markdown-style.css" />
+        </template>
+      </zero-md>
+    		<p></p>
+</div> <!-- Ende textbereich -->
+	<div id="fussbereich">
+         	</div> <!-- Ende fussbereich -->
+  	<div id="newsbereich">
+       	</div>  <!-- Ende newsbereich --> 
+   <script>
+    $( window ).on( "load", function() { 
+       load_content('navibereich', 'content-navi.html');
+       load_content('newsbereich', 'content-news.html');
+       load_content('fussbereich', 'content-footer.html');
+       load_content('kopfbereich', 'content-header.html');
+    });
+  </script>
+  </body>
+</html>
